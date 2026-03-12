@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="hero">
+
+<!-- SLIDER BACKGROUND -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+
+    <div class="swiper-slide">
+        <img src="{% static 'images/Buildings1.png' %}">
+    </div>
+
+    <div class="swiper-slide">
+        <img src="{% static 'images/Buildings2.png' %}">
+    </div>
+
+    <div class="swiper-slide">
+        <img src="{% static 'images/Buildings3.png' %}">
+    </div>
+
+  </div>
+
+  <div class="swiper-pagination"></div>
+</div>
+
+
+<!-- OVERLAY CONTENT -->
+<div class="container-fluid hero-overlay">
+
+<div class="row align-items-center">
+
+<!-- LEFT TEXT -->
+<div class="col-md-7 text-white">
+
+<h1 class="hero-title">
+Discover Properties <br>
+<span class="highlight">Simplified!</span>
+</h1>
+
+<div class="search-box">
+
+<input type="text"
+placeholder="Search by location, developer or project name">
+
+<button class="btn btn-warning">Search</button>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT FORM -->
+<div class="col-md-4 offset-md-1">
+
+<div class="lead-form">
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email">
+
+<input type="text" placeholder="Phone">
+
+<div class="radio-group">
+<label>I am a</label>
+<input type="radio"> Buyer
+<input type="radio"> Seller
+</div>
+
+<button class="btn btn-warning w-100">Submit</button>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+{% endblock %}

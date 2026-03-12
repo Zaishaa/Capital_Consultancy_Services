@@ -1,0 +1,67 @@
+.hero{
+    position: relative;   /* IMPORTANT */
+    height: 90vh;
+    overflow: hidden;
+}
+
+.swiper{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:1;
+}
+
+.swiper-slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-overlay{
+    position: relative;
+    z-index: 2;           /* makes text appear above slider */
+    background: rgba(0,0,0,0.4);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title{
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.highlight{
+    color: #ffd43b;
+}
+
+.search-box{
+    display: flex;
+    margin-top: 20px;
+}
+
+.search-box input{
+    width: 400px;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+}
+
+.search-box button{
+    margin-left: 10px;
+}
+
+.lead-form input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.lead-form{
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
