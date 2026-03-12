@@ -26,28 +26,36 @@
   <div class="swiper-pagination"></div>
 </div>
 
-<div>
-  <!-- OVERLAY CONTENT -->
-  <div class="container-fluid hero-overlay">
 
-  <div class="row align-items-center">
+<!-- OVERLAY CONTENT -->
+<div class="container-fluid hero-overlay">
 
-  <!-- LEFT TEXT -->
-  <div class="col-md-7 text-white">
+<div class="row align-items-center">
 
-  <h1 class="hero-title">
-  Discover Properties <br>
-  <span class="highlight">Simplified!</span>
-  </h1>
+<!-- LEFT TEXT -->
+<div class="col-md-7 text-white">
 
-  <div class="search-box">
+<h1 class="hero-title">
+Discover Properties <br>
+<span class="highlight">Simplified!</span>
+</h1>
 
-  <input type="text"
-  placeholder="Search by location, developer or project name">
+<form method="GET" action="{% url 'property_search' %}">
 
-  <button class="btn btn-warning">Search</button>
+<div class="search-box">
+
+<input type="text"
+name="q"
+placeholder="Search by location, developer or project name"
+required>
+
+<button type="submit" class="btn btn-warning">
+Search
+</button>
 
 </div>
+
+</form>
 
 </div>
 
@@ -57,19 +65,24 @@
 
 <div class="lead-form">
 
-<input type="text" placeholder="Full Name">
+<form method="POST">
+{% csrf_token %}
 
-<input type="email" placeholder="Email">
+<input type="text" name="name" placeholder="Full Name">
 
-<input type="text" placeholder="Phone">
+<input type="email" name="email" placeholder="Email">
+
+<input type="text" name="phone" placeholder="Phone">
 
 <div class="radio-group">
 <label>I am a</label>
-<input type="radio"> Buyer
-<input type="radio"> Seller
+<input type="radio" name="role" value="buyer"> Buyer
+<input type="radio" name="role" value="seller"> Seller
 </div>
 
-<button class="btn btn-warning w-100">Submit</button>
+<button type="submit" class="btn btn-warning w-100">Submit</button>
+
+</form>
 
 </div>
 

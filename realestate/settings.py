@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "core",
     "media",
     "properties",
+    "rest_framework"
 ]
 
 MIDDLEWARE = [
